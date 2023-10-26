@@ -1,0 +1,32 @@
+#include <stdlib.h>
+
+mod std;
+
+shape_t :: class {
+  radius :: int;
+}
+
+shape_t.area :: int() {
+  ret 3.14 * this.radius ** 2;
+}
+
+kite_t :: class {
+  diag_1 :: int
+  diag_2 :: int
+}
+
+kite_t.area :: int() {
+  ret this.diag_1 * this.diag_2 / 2;
+}
+
+mod _;
+use std;
+
+hi :: int() {
+  printf("hello world!\n\n");
+
+  s := shape_t { .radius = 20 };
+  printf("area: %d\n", s.area());
+
+  k := malloc(100 * sizeof(kite_t)) :> kite_t*;
+}

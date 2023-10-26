@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+mod a.b.c;
+use std;
+
+a :: 1;
+b :: "string";
+
+test :: int() {
+
+}
+
+hi :: int(int argc, char** argv) {
+  c := 0 :> int;
+  d := test();
+}
+
